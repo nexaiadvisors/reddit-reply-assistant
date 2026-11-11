@@ -1,0 +1,16 @@
+# Copy to config.toml and edit. config.toml is ignored by git.
+
+# The Reddit account this app runs as. "auth" refuses any other account.
+username = "your_reddit_username"
+
+# Subreddits to read. Only the newest posts are fetched.
+subreddits = ["smallbusiness", "sweatystartup", "Entrepreneur", "ClaudeAI"]
+
+# A post is listed only if its title or text contains one of these.
+keywords = ["AI", "automation", "automate", "chatbot", "ChatGPT", "Claude"]
+
+posts_per_subreddit = 25           # newest posts fetched per subreddit
+daily_request_budget = 100         # hard cap on API requests per UTC day
+min_seconds_between_requests = 2   # one request at a time, paced
+retention_hours = 48               # cached text is deleted after this long
+max_text_chars = 2000              # longer post text is cut before caching
